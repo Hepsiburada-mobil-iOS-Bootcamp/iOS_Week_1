@@ -126,6 +126,7 @@ class AlgoruthmManager: AlgorithmProtocol {
      */
     func mergeArraysTest() {
         var nums1 = [1,2,3,0,0,0]
+        // send the reference value to function
         merge(&nums1, 3, [2,5,6], 3)
     }
     
