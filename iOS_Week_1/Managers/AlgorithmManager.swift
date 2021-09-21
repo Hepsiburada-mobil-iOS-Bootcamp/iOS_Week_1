@@ -149,9 +149,16 @@ class AlgoruthmManager: AlgorithmProtocol {
         
     }
     
-//    private func missingNumber(_ nums: [Int]) -> Int {
-//
-//    }
+    private func missingNumber(_ nums: [Int]) -> Int {
+        let sorted = nums.sorted()
+        for item in 0..<sorted.count {
+            if sorted[item] != item {
+                return item
+            }
+        }
+        //it will return -1 if there is no missing number
+        return -1
+    }
     
     
 }
