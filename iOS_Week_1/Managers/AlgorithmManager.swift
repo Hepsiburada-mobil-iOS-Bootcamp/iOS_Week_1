@@ -27,8 +27,32 @@ class AlgoruthmManager: AlgorithmProtocol {
     }
     
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        // I solved of the question for you guys :D :D :D
-        return [0, 1]
+        var sum = 0
+               var array = [Int]()
+               for (indisi,i) in nums.enumerated(){
+                   if(i > target){
+                       continue;
+                   }
+                   if(i == target){
+                       return [i]
+                   }
+                   sum = i
+                   array = []
+                   array.append(indisi)
+                   for (indisj,j) in nums.enumerated(){
+                       print("\(i) + \(j)")
+                       sum += j
+                       if(sum>target){
+                           sum -= j
+                           continue;
+                       }
+                       array.append(indisj)
+                       if(sum == target){
+                           return array
+                       }
+                   }
+               }
+           return []
     }
     
     // MARK: - IsPalindrome
