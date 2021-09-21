@@ -94,12 +94,23 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: false
      */
     func duplicateTest() {
-        
+        print(containsDuplicate([1,2,3,4]))
+        print(containsDuplicate([1,2,3,4,1]))
+
     }
     
-//    func containsDuplicate(_ nums: [Int]) -> Bool {
-//            
-//    }
+    func containsDuplicate(_ nums: [Int]) -> Bool {
+        let sorted = nums.sorted()
+        var comp = sorted.first
+        for (indis,item) in sorted.enumerated(){
+            if(item == comp && indis != 0){
+                return true
+            }else{
+                comp = item
+            }
+        }
+        return false
+    }
     
     // MARK: - Merge Sorted Array
     /*
