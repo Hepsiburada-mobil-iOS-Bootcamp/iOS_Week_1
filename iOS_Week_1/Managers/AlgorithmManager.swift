@@ -159,7 +159,8 @@ class AlgoruthmManager: AlgorithmProtocol {
 
      */
     func missingNumberTest() {
-        
+        var nums = [3,0,1]
+        print(missingNumber(nums))
     }
     
     private func missingNumber(_ nums: [Int]) -> Int {
