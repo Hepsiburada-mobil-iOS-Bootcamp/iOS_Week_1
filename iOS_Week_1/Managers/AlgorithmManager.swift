@@ -62,13 +62,19 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: true
      Explanation: "amanaplanacanalpanama" is a palindrome.
      */
+    
     func isPalindromTest() {
-        
+        print(isPalindrome("A man, a plan, a canal: Panama"))
     }
     
-//    func isPalindrome(_ s: String) -> Bool {
-//
-//    }
+    }
+    func isPalindrome(_ s: String) -> Bool {
+        let result:String = s.lowercased().components(separatedBy: CharacterSet.punctuationCharacters).joined(separator: "").filter({ $0 != " "})
+        var left = result.prefix(result.count/2)
+        var right = String(result.suffix(result.count/2).reversed())
+        
+        return left == right
+    }
     
     // MARK: - Valid Anagram
     /*
@@ -159,7 +165,7 @@ class AlgoruthmManager: AlgorithmProtocol {
 
      */
     func missingNumberTest() {
-        var nums = [3,0,1]
+        let nums = [3,0,1]
         print(missingNumber(nums))
     }
     
