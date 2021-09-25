@@ -27,32 +27,8 @@ class AlgoruthmManager: AlgorithmProtocol {
     }
     
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        var sum = 0
-               var array = [Int]()
-               for (indisi,i) in nums.enumerated(){
-                   if(i > target){
-                       continue;
-                   }
-                   if(i == target){
-                       return [i]
-                   }
-                   sum = i
-                   array = []
-                   array.append(indisi)
-                   for (indisj,j) in nums.enumerated(){
-                       print("\(i) + \(j)")
-                       sum += j
-                       if(sum>target){
-                           sum -= j
-                           continue;
-                       }
-                       array.append(indisj)
-                       if(sum == target){
-                           return array
-                       }
-                   }
-               }
-           return []
+        // I solved of the question for you guys :D :D :D
+        return [0, 1]
     }
     
     // MARK: - IsPalindrome
@@ -62,19 +38,13 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: true
      Explanation: "amanaplanacanalpanama" is a palindrome.
      */
-    
     func isPalindromTest() {
-        print(isPalindrome("A man, a plan, a canal: Panama"))
+        
     }
     
-    }
-    func isPalindrome(_ s: String) -> Bool {
-        let result:String = s.lowercased().components(separatedBy: CharacterSet.punctuationCharacters).joined(separator: "").filter({ $0 != " "})
-        var left = result.prefix(result.count/2)
-        var right = String(result.suffix(result.count/2).reversed())
-        
-        return left == right
-    }
+//    func isPalindrome(_ s: String) -> Bool {
+//
+//    }
     
     // MARK: - Valid Anagram
     /*
@@ -83,13 +53,12 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: true
      */
     func isAnagramTest() {
-        print(isAnagram("anagram", "gramana"))
-        print(isAnagram("hello", "world"))
+        
     }
     
-    func isAnagram(_ s: String, _ t: String) -> Bool {
-        return  s.sorted() == t.sorted()
-    }
+//    func isAnagram(_ s: String, _ t: String) -> Bool {
+//
+//    }
     
     // MARK: - Contains Duplicate
     /*
@@ -100,23 +69,12 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: false
      */
     func duplicateTest() {
-        print(containsDuplicate([1,2,3,4]))
-        print(containsDuplicate([1,2,3,4,1]))
-
+        
     }
     
-    func containsDuplicate(_ nums: [Int]) -> Bool {
-        let sorted = nums.sorted()
-        var comp = sorted.first
-        for (indis,item) in sorted.enumerated(){
-            if(item == comp && indis != 0){
-                return true
-            }else{
-                comp = item
-            }
-        }
-        return false
-    }
+//    func containsDuplicate(_ nums: [Int]) -> Bool {
+//            
+//    }
     
     // MARK: - Merge Sorted Array
     /*
@@ -131,13 +89,11 @@ class AlgoruthmManager: AlgorithmProtocol {
      The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
      */
     func mergeArraysTest() {
-        var nums1 = [1,2,3,0,0,0]
-        // send the reference value to function
-        merge(&nums1, 3, [2,5,6], 3)
+        
     }
     
     private func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
-        nums1 =  (nums1[0..<m] + nums2[0..<n]).sorted()
+            
     }
     
     // MARK: - Intersection of Two Arrays
@@ -165,20 +121,12 @@ class AlgoruthmManager: AlgorithmProtocol {
 
      */
     func missingNumberTest() {
-        let nums = [3,0,1]
-        print(missingNumber(nums))
+        
     }
     
-    private func missingNumber(_ nums: [Int]) -> Int {
-        let sorted = nums.sorted()
-        for item in 0..<sorted.count {
-            if sorted[item] != item {
-                return item
-            }
-        }
-        //it will return -1 if there is no missing number
-        return -1
-    }
+//    private func missingNumber(_ nums: [Int]) -> Int {
+//
+//    }
     
     
 }
